@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Presupuesto App</title>
+</head>
+<body>
+    <section class="ingresar">
+        <!-- Presupuesto -->
+        <form id="formPresupuesto" class="ingresar__presupuesto">
+            <label for="presupuesto" >Ingresa Tu Presupuesto</label><br>
+            <input type="text" id="presupuesto"><!--presupuesto ingresado --><br></br>
+            <button>Calcular</button><br></br>
+        </form>
+        <!-- Nombre cantidad gasto  -->
+        <form id="formGasto" class="ingresar__gasto">
+            <label for="nombreGasto" >Ingresa El Nombre Del Gasto</label><br>
+            <input type="text" id="nombreGasto"><!--gasto ingresado --><br></br>
+            <label for="cantidadGasto" >Ingresa La Cantidad Del Gasto</label><br>
+            <input type="text" id="cantidadGasto"><br></br>
+            <button>Añadir Gasto</button>
+        </form>
+    </section>
+    <!-- Tablas derecha-->
+    <section class="tablas">
+        <!-- tabla calculos -->
+        <table>
+            <tr>
+                <td colspan="5">PRESUPUESTO</td>
+                <td colspan="5">GASTOS</td>
+                <td colspan="5">SALDO</td>
+            </tr>
+            <tr>
+                <td id="injPresupuesto" colspan="5">$0<!--presupuesto inyectado del ingresado--></td>
+                <td id="injGasto" colspan="5">$gasto</td>
+                <td colspan="5">$saldo</td>
+            </tr>
+        </table>
+        <!-- tabla items -->
+        <table >
+          <thead>
+            <tr>
+                <td>GASTO</td>
+                <td>VALOR</td>
+            </tr>
+          </thead>  
+          <hr>
+          <tbody id='filaTabla'>
+           
+          </tbody>
+        </table>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
