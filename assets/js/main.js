@@ -140,3 +140,21 @@ injValorGasto();
 
 
 
+
+// function getValue(value){
+
+//   var pantalla = document.getElementById("pantalla").value;  
+
+//   if (pantalla =="0"){
+
+//       document.getElementById("pantalla").value = value;  
+
+//   } else {
+
+//       document.getElementById("pantalla").value = pantalla + value;
+
+//  }
+
+
+
+// }
