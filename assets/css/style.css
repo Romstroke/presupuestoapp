@@ -4,7 +4,7 @@ body{
     display: flex;
     justify-content: space-around;
     font-family: 'Roboto Slab', serif;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 input{
@@ -13,16 +13,19 @@ input{
     border-radius: 20px;
     border: none;
     outline: none;
+    font-size: 20px;
+    color: #5a217a;
 }
 
 button{
         background-color:rgba(233, 169, 169, 0.288);
-        color: rgb(79, 49, 163);
+        color: #5a217a;
         border-radius: 30px;
         border: none;
         box-shadow: inset 0 0 15px 10px rgba(78, 79, 138, 0.527);
         padding: 20px;
         width: 200px;
+        font-size: 20px;
 }
 
 .ingresar{
