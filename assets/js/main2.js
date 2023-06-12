@@ -9,12 +9,12 @@ document.getElementById('formPresupuesto').addEventListener('submit',function(ev
    
 
     presupuesto =Number(document.getElementById('presupuesto').value);
-        console.log(presupuesto)
+        // console.log(presupuesto)
   
 
     if(isNaN(presupuesto)){
        
-        alert('no');
+        alert('Debes ingresar una cantidad en números');
         return;
       }
   
@@ -41,7 +41,7 @@ document.getElementById('formGasto').addEventListener('submit', function(event){
         return;
     }
     gastos.push(gasto); 
-    console.log(gastos);
+    // console.log(gastos);
 
     document.getElementById('cantidadGasto').value = '';
     document.getElementById('nombreGasto').value = '';
@@ -60,7 +60,7 @@ function injGastos(gastos){
         `       <tr id='tr'>
                     <td>${gastos[i].nombre}</td>
                     <td>${gastos[i].valor.toLocaleString('es-CL')}</td>
-                    <td id="button" onclick="eliminarGasto(${i})"><button>X</button></td>
+                    <td id="button" onclick="eliminarGasto(${i})"><i class="fa-solid fa-trash" style="color: #593e79;"></i></td>
                 </tr>
         `
         document.getElementById('filaTabla').innerHTML+= tr; 
@@ -74,13 +74,13 @@ function inyectarGastoArriba(gastos){
         total += gastos[i].valor; ///// reduce 
     }
 
-    document.getElementById('injGasto').innerHTML = total.toLocaleString('es-CL');
-    document.getElementById('injSaldo').innerHTML = (presupuesto - total).toLocaleString('es-CL');
+    document.getElementById('injGasto').innerHTML = '$'+total.toLocaleString('es-CL');
+    document.getElementById('injSaldo').innerHTML = '$'+(presupuesto - total).toLocaleString('es-CL');
 }
 
 function eliminarGasto(index){
 
-    alert(index);
+    // alert(index);
     gastos.splice(index,1);
 
     injGastos(gastos);
